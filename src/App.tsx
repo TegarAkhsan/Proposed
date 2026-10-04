@@ -676,19 +676,21 @@ export default function App() {
               />
             ))}
           </div>
-        </div>
 
-        {/* ─── PITA BUNGA BERULANG ANTARA SECTION SURAT & MUSIK ─── */}
-        <div className="floral-divider-strip" aria-hidden="true">
-          <div className="floral-divider-track">
-            {Array.from({ length: 14 }).map((_, idx) => (
-              <img
-                key={idx}
-                src="/elemen/Hiasanbunga.png"
-                alt=""
-                className="floral-garland-unit"
-              />
-            ))}
+          {/* ─── TABURAN BUNGA TERSEBAR (Variasi Besar-Kecil & Animasi Mengambang) ─── */}
+          <div className="scattered-flowers-layer" aria-hidden="true">
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-1" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-2" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-3" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-4" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-5" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-6" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-7" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-8" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-9" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-10" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-11" />
+            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-12" />
           </div>
         </div>
       </section>
