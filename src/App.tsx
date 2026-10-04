@@ -570,27 +570,31 @@ export default function App() {
             {PHOTOS.map((src, i) => (
               <div
                 key={i}
-                ref={i === 1 ? mainPhotoRef : undefined}
-                className={`frame ${i === 1 ? 'main' : ''}`}
-                style={{
-                  backgroundImage: `url("${encodeURI(src)}")`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
+                className={`frame-anchor ${i === 0 ? 'frame-anchor-flower' : ''}`}
               >
                 {i === 0 && (
                   <img
                     src="/elemen/Flower1.png"
                     alt="Flower Ornament"
-                    className="frame-flower-decor"
+                    className="hero-flower-decor"
                   />
                 )}
-                {i === 1 && (
-                  <>
-                    <span className="tag l">galeri {CFG.aku.toLowerCase()}</span>
-                    <span className="tag r">cantikku</span>
-                  </>
-                )}
+                <div
+                  ref={i === 1 ? mainPhotoRef : undefined}
+                  className={`frame ${i === 1 ? 'main' : ''}`}
+                  style={{
+                    backgroundImage: `url("${encodeURI(src)}")`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  {i === 1 && (
+                    <>
+                      <span className="tag l">galeri {CFG.aku.toLowerCase()}</span>
+                      <span className="tag r">cantikku</span>
+                    </>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -677,20 +681,20 @@ export default function App() {
             ))}
           </div>
 
-          {/* ─── TABURAN BUNGA TERSEBAR (Variasi Besar-Kecil & Animasi Mengambang) ─── */}
+          {/* ─── TABURAN BUNGA CANTIK (Flower1.png Beragam Ukuran & Animasi Mengambang) ─── */}
           <div className="scattered-flowers-layer" aria-hidden="true">
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-1" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-2" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-3" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-4" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-5" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-6" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-7" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-8" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-9" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-10" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-11" />
-            <img src="/elemen/Hiasanbunga.png" alt="" className="scatter-flower sf-12" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-1" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-2" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-3" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-4" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-5" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-6" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-7" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-8" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-9" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-10" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-11" />
+            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-12" />
           </div>
         </div>
       </section>
