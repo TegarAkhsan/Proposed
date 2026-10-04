@@ -570,31 +570,20 @@ export default function App() {
             {PHOTOS.map((src, i) => (
               <div
                 key={i}
-                className={`frame-anchor ${i === 0 ? 'frame-anchor-flower' : ''}`}
+                ref={i === 1 ? mainPhotoRef : undefined}
+                className={`frame ${i === 1 ? 'main' : ''}`}
+                style={{
+                  backgroundImage: `url("${encodeURI(src)}")`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
               >
-                {i === 0 && (
-                  <img
-                    src="/elemen/Flower1.png"
-                    alt="Flower Ornament"
-                    className="hero-flower-decor"
-                  />
+                {i === 1 && (
+                  <>
+                    <span className="tag l">galeri {CFG.aku.toLowerCase()}</span>
+                    <span className="tag r">cantikku</span>
+                  </>
                 )}
-                <div
-                  ref={i === 1 ? mainPhotoRef : undefined}
-                  className={`frame ${i === 1 ? 'main' : ''}`}
-                  style={{
-                    backgroundImage: `url("${encodeURI(src)}")`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                >
-                  {i === 1 && (
-                    <>
-                      <span className="tag l">galeri {CFG.aku.toLowerCase()}</span>
-                      <span className="tag r">cantikku</span>
-                    </>
-                  )}
-                </div>
               </div>
             ))}
           </div>
@@ -679,22 +668,6 @@ export default function App() {
                 aria-label={`Buka surat halaman ${i + 1}`}
               />
             ))}
-          </div>
-
-          {/* ─── TABURAN BUNGA CANTIK (Flower1.png Beragam Ukuran & Animasi Mengambang) ─── */}
-          <div className="scattered-flowers-layer" aria-hidden="true">
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-1" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-2" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-3" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-4" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-5" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-6" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-7" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-8" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-9" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-10" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-11" />
-            <img src="/elemen/Flower1.png" alt="" className="scatter-flower sf-12" />
           </div>
         </div>
       </section>
