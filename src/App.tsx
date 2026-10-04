@@ -35,6 +35,14 @@ const PHOTOS = [
   '/Gambar Kenangan/Gambar 3.jpeg',
 ];
 
+const ALL_KENANGAN_PHOTOS = [
+  '/Gambar Kenangan/Gambar 1.jpeg',
+  '/Gambar Kenangan/Gambar 2.jpeg',
+  '/Gambar Kenangan/Gambar 3.jpeg',
+  '/Gambar Kenangan/Gambar 4.jpeg',
+  '/Gambar Kenangan/Gambar 5.jpeg',
+];
+
 const LETTER = [
   ['Hai, sayang', 'Surat kecil sebelum kita keluar bersama.'],
   ['Aku masih jatuh cinta, setiap hari', 'Pada caramu tertawa, dan pada sore yang jadi lebih pelan kalau ada kamu.'],
@@ -575,6 +583,30 @@ export default function App() {
           <p className="small credit">
             dibuat dengan sayang oleh <b id="fromName">{CFG.aku}</b>
           </p>
+        </div>
+
+        {/* ─── RUNNING PHOTO MARQUEE (Right to Left) ─── */}
+        <div className="memory-marquee-section" aria-label="Galeri Kenangan Berjalan">
+          <div className="memory-marquee-track">
+            {/* Set 1 */}
+            {ALL_KENANGAN_PHOTOS.map((src, idx) => (
+              <div key={`m1-${idx}`} className="memory-marquee-item">
+                <img src={encodeURI(src)} alt={`Kenangan ${idx + 1}`} loading="lazy" />
+              </div>
+            ))}
+            {/* Set 2 (for seamless loop) */}
+            {ALL_KENANGAN_PHOTOS.map((src, idx) => (
+              <div key={`m2-${idx}`} className="memory-marquee-item">
+                <img src={encodeURI(src)} alt={`Kenangan ${idx + 1} loop`} loading="lazy" />
+              </div>
+            ))}
+            {/* Set 3 (extra safety for wide displays) */}
+            {ALL_KENANGAN_PHOTOS.map((src, idx) => (
+              <div key={`m3-${idx}`} className="memory-marquee-item">
+                <img src={encodeURI(src)} alt={`Kenangan ${idx + 1} loop 2`} loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
       </header>
 

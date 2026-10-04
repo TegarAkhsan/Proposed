@@ -228,6 +228,69 @@ button {
 .credit {
   text-align: center;
   margin-top: 18px;
+  margin-bottom: 32px;
+}
+
+/* ─── Continuous Running Photo Marquee (Right to Left) ─── */
+.memory-marquee-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding-block: 18px;
+  background: linear-gradient(180deg, rgba(138, 19, 40, 0.03) 0%, rgba(138, 19, 40, 0.08) 50%, rgba(138, 19, 40, 0.03) 100%);
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.memory-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: marqueeScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.memory-marquee-section:hover .memory-marquee-track {
+  animation-play-state: paused;
+}
+
+.memory-marquee-item {
+  flex: 0 0 auto;
+  width: clamp(140px, 20vw, 200px);
+  aspect-ratio: 4 / 5;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid var(--wine);
+  box-shadow: 0 8px 22px -6px rgba(122, 10, 22, 0.35);
+  background: #cfc7c8;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.memory-marquee-item:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 28px -6px rgba(122, 10, 22, 0.5);
+}
+
+.memory-marquee-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333333%);
+  }
 }
 
 /* ─── 2 Surat Section (Clean, Big & with Side Buttons) ─── */
