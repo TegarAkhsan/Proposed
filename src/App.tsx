@@ -583,7 +583,7 @@ export default function App() {
         <div className="sec-container sec-letter-container" data-reveal>
           {/* Elemen Pita Cantik */}
           <div className="letter-header-decor">
-            <img src="/Elemen/Ribbon.png" alt="Ribbon Decor" className="letter-ribbon-badge" />
+            <img src="/elemen/Ribbon.png" alt="Ribbon Decor" className="letter-ribbon-badge" />
           </div>
 
           <div className="stage-wrapper">
@@ -636,7 +636,7 @@ export default function App() {
       <section className="sec sec-music" id="music" aria-label="Musik">
         <div className="sec-container" data-reveal>
           <div className="m-head">
-            <img src="/Elemen/SongPiring.png" alt="Piringan Hitam" className="music-decor-badge" />
+            <img src="/elemen/SongPiring.png" alt="Piringan Hitam" className="music-decor-badge" />
             <span className="small">lagu-lagu yang mengingatkanku padamu</span>
             <h2>
               Kamu mengingatkanku pada warna <span className="sc">Merah</span>
@@ -764,9 +764,9 @@ export default function App() {
       >
         <div className="sec-container">
           <div className="tickets-header-decor">
-            <img src="/Elemen/BordidStar.png" alt="Star" className="star-badge" />
+            <img src="/elemen/BordidStar.png" alt="Star" className="star-badge" />
             <span className="eyebrow">Tiga rencana</span>
-            <img src="/Elemen/BordidStar.png" alt="Star" className="star-badge" />
+            <img src="/elemen/BordidStar.png" alt="Star" className="star-badge" />
           </div>
           <h2>Ambil satu tiket</h2>
 
@@ -968,7 +968,7 @@ export default function App() {
           <div className="close-badge-group">
             <span className="close-sparkle">✦</span>
             <img
-              src="/Elemen/LovSignHand.png"
+              src="/elemen/LovSignHand.png"
               alt="Love Sign Hand"
               className="close-heart-badge"
             />
