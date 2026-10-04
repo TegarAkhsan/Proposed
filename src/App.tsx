@@ -41,6 +41,14 @@ const ALL_KENANGAN_PHOTOS = [
   '/Gambar Kenangan/Gambar 3.jpeg',
   '/Gambar Kenangan/Gambar 4.jpeg',
   '/Gambar Kenangan/Gambar 5.jpeg',
+  '/Gambar Kenangan/Gambar 6.jpeg',
+  '/Gambar Kenangan/Gambar 7.jpeg',
+  '/Gambar Kenangan/Gambar 8.jpeg',
+  '/Gambar Kenangan/Gambar 9.jpeg',
+  '/Gambar Kenangan/Gambar 10.jpeg',
+  '/Gambar Kenangan/Gambar 11.jpeg',
+  '/Gambar Kenangan/Gambar 12.jpeg',
+  '/Gambar Kenangan/Gambar 13.jpeg',
 ];
 
 const LETTER = [
@@ -570,6 +578,13 @@ export default function App() {
                   backgroundPosition: 'center',
                 }}
               >
+                {i === 0 && (
+                  <img
+                    src="/elemen/Flower1.png"
+                    alt="Flower Ornament"
+                    className="frame-flower-decor"
+                  />
+                )}
                 {i === 1 && (
                   <>
                     <span className="tag l">galeri {CFG.aku.toLowerCase()}</span>
@@ -658,6 +673,20 @@ export default function App() {
                 className={`dot ${pg === i ? 'active' : ''}`}
                 onClick={() => setPg(i)}
                 aria-label={`Buka surat halaman ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* ─── PITA BUNGA BERULANG ANTARA SECTION SURAT & MUSIK ─── */}
+        <div className="floral-divider-strip" aria-hidden="true">
+          <div className="floral-divider-track">
+            {Array.from({ length: 14 }).map((_, idx) => (
+              <img
+                key={idx}
+                src="/elemen/Hiasanbunga.png"
+                alt=""
+                className="floral-garland-unit"
               />
             ))}
           </div>
